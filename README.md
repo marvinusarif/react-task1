@@ -17,7 +17,6 @@ This is the final assessment project for Udacity's React Fundamentals course.
   |-- BookSearch.js - Search Page of Books Collection
   |-- BookShelf.js - BookShelf Components
   |-- BookShelves.js - Collections of BookShelf
-
  +-- icons/ - Helpful images for your app. Use at your discretion.
   |-- add.svg
   |-- arrow-back.svg
@@ -30,8 +29,8 @@ This is the final assessment project for Udacity's React Fundamentals course.
  |-- index.js - You should not need to modify this file. It is used for DOM rendering only.
  |-- index.css - Global styles. You probably won't need to change anything here.
 |-- .gitignore 
-|-- CONTRIBUTING.MD - Information about contributing to this repo. 
-TL;DR - Fork and clone your own version of this to use it.
+
+- Fork and clone your own version of this to use it.
 |-- README.MD - This README file.
 |-- SEARCH_TERMS.md - The whitelisted short collection of available search terms 
 for you to use with your app.
