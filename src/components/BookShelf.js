@@ -6,7 +6,7 @@ class BookShelf extends Component {
     const { booksList, section, selectOnChange } = this.props;
     const books = booksList.map( book => {
       return ( <li key={book.id}>
-                <Book detail={book} selectOnChange={selectOnChange}/>
+                <Book bookDetail={book} selectOnChange={selectOnChange}/>
                </li>)
     });
 
@@ -24,7 +24,7 @@ class BookShelf extends Component {
     }else{
       return (
               <ol className="books-grid">
-                <li> This self is empty </li>
+                <li> This shelf is empty </li>
               </ol>
             )
     }

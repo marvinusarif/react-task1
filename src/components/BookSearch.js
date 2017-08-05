@@ -54,7 +54,7 @@ class BookSearch extends Component {
        books = booksSearchResult.map( book => {
         return (
           <li key={book.id}>
-            <Book detail={book} selectOnChange={selectOnChange}/>
+            <Book bookDetail={book} selectOnChange={selectOnChange}/>
           </li>
         )
       })

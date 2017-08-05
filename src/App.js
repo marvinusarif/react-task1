@@ -31,9 +31,9 @@ class BooksApp extends Component {
   }
   selectOnChange(book,e){
     const shelfTarget = e.target.value;
-    const shelfOrigin = book.detail.shelf;
+    const shelfOrigin = book.shelf;
     //change book.shelf from shelfOrigin to shelfTarget
-    let bookTemp = book.detail;
+    let bookTemp = book;
     bookTemp.shelf = shelfTarget;
     if( shelfOrigin === "none" && shelfTarget !=="none"){
       this.setState( (prevState) => ({
