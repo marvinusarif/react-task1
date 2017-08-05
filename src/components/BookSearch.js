@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import _ from 'lodash'
 import * as BooksAPI from '../BooksAPI'
 import { Link } from 'react-router-dom'
 import Book from './Book.js'
@@ -17,7 +18,7 @@ class BookSearch extends Component {
     this.setState({
       searchQuery : query
     })
-    this.getSearchBooks(query);
+    _.debounce(this.getSearchBooks(query),300)
   }
   getSearchBooks(query){
     if(query){
@@ -49,6 +50,7 @@ class BookSearch extends Component {
   render(){
     const { booksSearchResult } = this.state;
     const { selectOnChange } = this.props;
+
     let books = '';
     if(booksSearchResult.length > 0){
        books = booksSearchResult.map( book => {
