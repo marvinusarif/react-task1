@@ -12,14 +12,16 @@ class BookSearch extends Component {
       searchQuery : ""
     }
     this.searchBooks = this.searchBooks.bind(this);
+    this.getSearchBooks = _.debounce(this.getSearchBooks,300);
   }
   searchBooks(e){
-    const query = e.target.value;
+    let query = e.target.value;
     this.setState({
       searchQuery : query
     })
-    _.debounce(this.getSearchBooks(query),300)
+    this.getSearchBooks(query)
   }
+
   getSearchBooks(query){
     if(query){
       const { currentlyReading, wantToRead, read } = this.props;
